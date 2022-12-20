@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Source+Code+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar{
+    background-color: rgb(196, 192, 192);
+    width: 435px;
+    font-family: 'Fira Sans',sans-serif;
+    height: 100vh;
+}
+
+.sidebar nav{
+    padding: 40px;
+}
+
+.sidebar nav li{
+   list-style: none;
+   font-size: 30px;
+   padding: 35px 0;
+}
+
+.sidebar nav li a{
+    text-decoration: none;
+    color: black;
+}
+
+.main{
+    /* background-color: yellow; */
+    width: 90vw;
+}
+
+.container{
+    display: flex;
+}
+
+.buttons{
+    margin-top: 35px;
+}
+
+.btn{
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: white;
+    background-color: dodgerblue;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.btn-sm{
+    font-size: 15px;
+    padding: 7px 13px;
+    margin: 12px 0;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.blogItem{
+    margin: 20px;
+    font-family: 'Fira Sans',sans-serif;
+}
+
+.blogContainer h1{
+    font-family: 'Fira Sans',sans-serif;
+    margin: 23px;
+}
+
+.blogItem p{
+    font-family: 'Source Code Pro', monospace;
+}
