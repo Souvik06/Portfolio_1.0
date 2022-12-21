@@ -85,6 +85,10 @@
     color: black;
 }
 
+.intro{
+    margin: 0 88px;
+}
+
 .intro h2{
     font-family: 'Fira Sans',sans-serif;
     margin: 12px;

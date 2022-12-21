@@ -91,6 +91,10 @@
     font-family: 'Fira Sans',sans-serif;
 }
 
+.blogContainer{
+    margin: 0 88px;
+}
+
 .blogContainer h1{
     font-family: 'Fira Sans',sans-serif;
     margin: 23px;
