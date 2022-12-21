@@ -60,31 +60,6 @@
     display: flex;
 }
 
-.buttons{
-    margin-top: 35px;
-}
-.btn{
-    padding: 10px 15px;
-    border-radius: 20px;
-    color: white;
-    background-color: dodgerblue;
-    font-weight: bold;
-    font-size: 20px;
-    margin: 0 3px;
-    cursor: pointer;
-}
-
-.btn-sm{
-    font-size: 15px;
-    padding: 7px 13px;
-    margin: 12px 0;
-}
-
-.btn:hover{
-    background-color: white;
-    color: black;
-}
-
 .intro{
     margin: 0 88px;
 }
