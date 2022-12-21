@@ -10,6 +10,6 @@ document.querySelector('.hamburger').addEventListener("click",()=>{
         document.querySelector('.ham').style.display = 'none';
         setTimeout(()=>{
             document.querySelector('.cross').style.display = 'inline';
-        },400);
+        },300);
     }
 })
