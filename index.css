@@ -62,7 +62,7 @@
 .infoContainer{
     /* background-color: green; */
     height: 60vh;
-    width: 80vw;
+    width: 100vw;
     margin: 140px auto;
     display: flex;
     justify-content: space-around;
