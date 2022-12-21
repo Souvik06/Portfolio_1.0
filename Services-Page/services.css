@@ -63,3 +63,8 @@
 .serviceContainer{
     margin: 0 88px;
 }
+
+.serviceContainer h1{
+    font-family: 'Fira Sans',sans-serif;
+    margin: 23px;
+}
