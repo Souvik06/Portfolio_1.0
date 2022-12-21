@@ -8,9 +8,10 @@
 
 .sidebar{
     background-color: rgb(196, 192, 192);
-    width: 435px;
+    /* width: 435px; */
     font-family: 'Fira Sans',sans-serif;
     height: 100vh;
+    transition: transform 0.3s ease-in;
 }
 
 .sidebar nav{
@@ -198,4 +199,26 @@
 .t5{
     width:72.5px;
     background-color: red
+}
+
+
+.sidebarGo{
+    transform: translate(-443px,0px);
+    position: absolute;
+}
+
+.hamburger{
+    position: absolute;
+    cursor: pointer;
+    top:10px;
+    left: 10px;
+}
+
+.ham{
+    margin-top: 10px;
+}
+
+.cross{
+    margin-left: 160px;
+    margin-top: 10px;
 }
