@@ -156,12 +156,9 @@
     color: white;
 }
 
-.material-icons{
-    margin: 5px 2px;
-}
-
-.material-icons.md-56 {
-    font-size: 56px;
+.fa-envelope{
+    font-size:48px;
+    color:red;
 }
 
 .devPic img{
