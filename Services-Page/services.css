@@ -64,7 +64,12 @@
     margin: 10px 88px;
 }
 
-.serviceContainer h1{
+.serviceContainer h2{
     font-family: 'Fira Sans',sans-serif;
     margin: 23px;
+}
+
+.serviceContainer p{
+    font-family: 'Source Code Pro', monospace;
+    margin: 12px;
 }
