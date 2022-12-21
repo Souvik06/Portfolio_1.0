@@ -156,6 +156,11 @@
     color: white;
 }
 
+.mail-icon{
+    margin: 5px 2px;
+    
+}
+
 .devPic img{
     height: 60vh;
 }
