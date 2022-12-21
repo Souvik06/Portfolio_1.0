@@ -108,3 +108,9 @@
     width:72.5px;
     background-color: red
 }
+
+@media (max-width: 1615px) { 
+    .intro{
+        margin: 50px 8px;
+    }
+}

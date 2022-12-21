@@ -73,3 +73,8 @@
     font-family: 'Source Code Pro', monospace;
     margin: 12px;
 }
+@media (max-width: 1615px) { 
+    .serviceContainer{
+        margin: 50px 8px;
+    }
+}

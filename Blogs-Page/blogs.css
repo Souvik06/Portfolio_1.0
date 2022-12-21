@@ -103,3 +103,9 @@
 .blogItem p{
     font-family: 'Source Code Pro', monospace;
 }
+
+@media (max-width: 1615px) { 
+    .blogContainer{
+        margin: 50px 8px;
+    }
+}
