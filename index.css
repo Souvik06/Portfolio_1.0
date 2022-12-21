@@ -123,10 +123,6 @@
     color: black;
 }
 
-.devPic img{
-    height: 60vh;
-}
-
 .fa {
     padding: 20px;
     font-size: 30px;
@@ -158,6 +154,10 @@
 .fa-linkedin {
     background: #007bb5;
     color: white;
+}
+
+.devPic img{
+    height: 60vh;
 }
 
 @media (max-width: 1615px) { 
