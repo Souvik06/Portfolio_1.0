@@ -9,7 +9,7 @@
 .sidebar{
     position: absolute;
     background-color: rgb(196, 192, 192);
-    /* width: 435px; */
+    width: 435px;
     font-family: 'Fira Sans',sans-serif;
     height: 100vh;
     transition: transform 0.3s ease-in;
