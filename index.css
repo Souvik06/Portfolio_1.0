@@ -123,17 +123,7 @@
     color: black;
 }
 
-.fa {
-    padding: 15px;
-    font-size: 20px;
-    width: 20px;
-    text-align: center;
-    text-decoration: none;
-    margin: 3px;
-    border-radius: 50%;
-}
-
-.fab {
+.fa,.fab {
     padding: 15px;
     font-size: 20px;
     width: 20px;
