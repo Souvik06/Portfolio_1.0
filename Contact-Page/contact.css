@@ -9,7 +9,7 @@
 .sidebar{
     position: absolute;
     background-color: rgb(196, 192, 192);
-    /* width: 435px; */
+    width: 300px;
     font-family: 'Fira Sans',sans-serif;
     height: 100vh;
     transition: transform 0.3s ease-in;
@@ -47,7 +47,7 @@
 }
 
 .cross{
-    margin-left: 160px;
+    margin-left: 225px;
     margin-top: 10px;
 }
 
