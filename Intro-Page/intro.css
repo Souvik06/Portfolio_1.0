@@ -69,7 +69,7 @@
     margin: 12px;
 }
 
-.intro p{
+.intro p,dt,dd{
     font-family: 'Source Code Pro', monospace;
     margin: 12px;
 }
