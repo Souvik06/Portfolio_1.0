@@ -74,6 +74,10 @@
     margin: 12px;
 }
 
+table {
+    width: max-content;
+}
+
 .skill{
     width: 265px;
     height: 5px;
