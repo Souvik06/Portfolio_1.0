@@ -1,3 +1,4 @@
+/* Basic Function styles */
 html,body{font-size:15px;line-height:1.5}
 html{overflow-x:hidden}
 h1{font-size:36px}
@@ -11,11 +12,33 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 img{vertical-align:middle}
 a{color:inherit}
 
+/* Fonts */
 .wide{letter-spacing:4px}
 .serif{font-family:serif}
 .sans-serif{font-family:sans-serif}
 .cursive{font-family:cursive}
 .monospace{font-family:monospace}
+
+/* Round Borders */
+.round-small{border-radius:2px}
+.round,.round-medium{border-radius:4px}
+.round-large{border-radius:8px}
+.round-xlarge{border-radius:16px}
+.round-xxlarge{border-radius:32px}
+
+/* Opacity */
+.opacity,.hover-opacity:hover{opacity:0.60}
+.opacity-off,.hover-opacity-off:hover{opacity:1}
+.opacity-max{opacity:0.25}.opacity-min{opacity:0.75}
+
+/* Grey Scale */
+.greyscale-max,.grayscale-max,.hover-greyscale:hover,.hover-grayscale:hover{filter:grayscale(100%)}
+.greyscale,.grayscale{filter:grayscale(75%)}.greyscale-min,.grayscale-min{filter:grayscale(50%)}
+
+/* Sepia */
+.sepia{filter:sepia(75%)}
+.sepia-max,.hover-sepia:hover{filter:sepia(100%)}
+.sepia-min{filter:sepia(50%)}
 
 /* Borders */
 .border-0{border:0!important}
