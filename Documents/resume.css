@@ -16,10 +16,6 @@ html{
     clear:both
 }
 
-.table {
-    width: -webkit-fill-available;
-}
-
 .third,.twothird{
     float:left;
     width:100%
