@@ -170,8 +170,6 @@ html,body,h1,h2,h3,h4,h5,h6 {
     padding: 0 0 24px calc(36px - 2px);
 }
 
-
-
 .positionCard:last-of-type .profileContent{
     border-left: none;
     margin-left: 0;
@@ -193,6 +191,7 @@ html,body,h1,h2,h3,h4,h5,h6 {
 .educationDetails{
     display:flex;
     margin: 5px auto;
+    flex-wrap: wrap;
 }
 
 .educationDetails p{
