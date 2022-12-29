@@ -6,6 +6,39 @@
     padding: 0;
 }
 
+body{
+    background-color: wheat;
+}
+
+.header{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 5px;
+    padding: 15px;
+}
+
+.menuGroup{
+    display: flex;
+}
+
+.menu{
+    list-style-type: none;
+    margin: 10px 25px;
+}
+
+.menuTitle{
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: HelveticaNeue,sans-serif;
+}
+
+.menuTitle:hover{
+    opacity: 70%;
+}
+
 .sidebar{
     position: absolute;
     background-color: rgb(196, 192, 192);
@@ -113,8 +146,17 @@ table {
     background-color: red
 }
 
-@media (max-width: 1615px) { 
+@media (max-width: 1279px) { 
     .intro{
         margin: 80px 8px;
+    }
+    .header{
+        display: none;
+    }
+}
+
+@media(min-width:1280px){
+    .hamburger{
+        display: none;
     }
 }
