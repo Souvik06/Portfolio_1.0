@@ -7,6 +7,39 @@
     padding: 0;
 }
 
+body{
+    background-color: wheat;
+}
+
+.header{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 5px;
+    padding: 15px;
+}
+
+.menuGroup{
+    display: flex;
+}
+
+.menu{
+    list-style-type: none;
+    margin: 10px 25px;
+}
+
+.menuTitle{
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: HelveticaNeue,sans-serif;
+}
+
+.menuTitle:hover{
+    opacity: 70%;
+}
+
 .sidebar{
     position: absolute;
     background-color: rgb(196, 192, 192);
@@ -63,8 +96,7 @@
 }
 
 .infoContainer{
-    /* background-color: green; */
-    height: 60vh;
+    /* background-color:bisque; */
     width: 80vw;
     margin: 140px auto;
     display: flex;
@@ -80,21 +112,21 @@
 }
 
 .hello{
-    font-size: 45px;
+    font-size: 2.8125rem; /* 45 px*/
 }
 
 .name{
-    font-size: 40px;
+    font-size: 2.5rem; /* 40 px*/
     font-weight: bold;
     font-family: 'Fira Sans',sans-serif;
 }
 
 .about{
-    font-size: 30px;
+    font-size: 1.875rem; /* 30 px*/
 }
 
 .moreAbout{
-    font-size: 20px;
+    font-size: 1.25rem; /* 20 px*/
     margin-top: 20px;
     font-family: 'Fira Sans',sans-serif;
 }
@@ -104,29 +136,29 @@
 }
 .btn{
     padding: 10px 15px;
-    border-radius: 20px;
-    color: white;
-    background-color: dodgerblue;
+    border-radius: 50px;
+    color: black;
+    background-color: transparent;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 0 3px;
     cursor: pointer;
 }
 
 .btn-sm{
-    font-size: 15px;
+    font-size: 0.9375rem; /* 15 px*/
     padding: 7px 13px;
     margin: 12px 0;
 }
 
 .btn:hover{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: wheat;
 }
 
 .fa,.fab {
     padding: 15px;
-    font-size: 20px;
+    font-size: 1.25rem; /* 20 px*/
     width: 20px;
     text-align: center;
     text-decoration: none;
@@ -169,10 +201,22 @@
 
 .devPic img{
     height: 60vh;
+    width: 100%;
+    min-height: 400px;
+    max-height: 600px;
 }
 
 @media (max-width: 1279px) { 
     .devPic{
+        display: none;
+    }
+    .header{
+        display: none;
+    }
+}
+
+@media(min-width:1280px){
+    .hamburger{
         display: none;
     }
 }
