@@ -71,6 +71,18 @@ html,body,h1,h2,h3,h4,h5,h6 {
     max-width:980px
 }
 
+.overlay {
+    position: absolute; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.25); /* Black see-through */
+    width: 100%;
+    text-align: center;
+  }
+
+.display-container{
+    position:relative;
+}
+
 .display-container:hover .display-hover{
     display:block
 }
