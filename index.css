@@ -171,7 +171,7 @@
     height: 60vh;
 }
 
-@media (max-width: 1615px) { 
+@media (max-width: 1279px) { 
     .devPic{
         display: none;
     }
