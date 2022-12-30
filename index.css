@@ -18,8 +18,7 @@ body{
     position: fixed;
     top: 0;
     padding: 25px 0;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row-reverse;
 }
 
 .menuGroup{
