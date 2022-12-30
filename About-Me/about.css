@@ -114,7 +114,7 @@ body{
 }
 
 .intro{
-    margin: 30px 150px;
+    margin: 30px 250px;
 }
 
 .intro h2{
@@ -143,9 +143,34 @@ body{
     color: wheat;
 }
 
+.aboutContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 100px;
+    margin: 15px 10px;
+}
+
+.myPic{
+    max-height: 300px;
+    border-radius: 5%;
+}
+
 .about-me{
     font-family: 'Source Code Pro', monospace;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.about-me h2{
+    margin: 10px 0;    
+    font-weight: bold;
+    font-family: 'Fira Sans',sans-serif;
 }
 
 .about-me ul{
@@ -209,6 +234,12 @@ table {
     }
     .sectionTitle{
         text-align: center;
+    }
+    .aboutContainer{
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 20px 5px;
+        margin: 0;
     }
 }
 
