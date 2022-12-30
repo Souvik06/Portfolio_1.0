@@ -171,8 +171,8 @@ body{
 
 .fa,.fab {
     padding: 15px;
-    font-size: 1.25rem; /* 20 px*/
-    width: 20px;
+    font-size: 1rem; /* 16 px*/
+    width: 1rem; /* 16 px*/
     text-align: center;
     text-decoration: none;
     margin: 3px;
