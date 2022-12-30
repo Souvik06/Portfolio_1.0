@@ -171,8 +171,6 @@ body{
 
 .fa,.fab {
     padding: 15px;
-    font-size: 1rem; /* 16 px*/
-    width: 1rem; /* 16 px*/
     text-align: center;
     text-decoration: none;
     margin: 3px;
@@ -226,10 +224,18 @@ body{
     .header{
         display: none;
     }
+    .fa,.fab{
+        font-size: 0.75rem; /* 12 px*/
+        width: 0.75rem; /* 12 px*/
+    }
 }
 
 @media(min-width:1280px){
     .hamburger{
         display: none;
+    }
+    .fa,.fab{
+        font-size: 1.25rem; /* 20 px*/
+        width: 1.25rem; /* 20 px*/
     }
 }
