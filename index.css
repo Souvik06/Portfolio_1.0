@@ -11,10 +11,13 @@ body{
     background-color: wheat;
 }
 
-.header{
-    background: antiquewhite;
+.fixed-header{
+    background: wheat;
+    width: 100%;
     display: flex;
-    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    padding: 25px 0;
     justify-content: center;
     align-items: center;
 }
@@ -222,7 +225,7 @@ body{
     .devPic{
         display: none;
     }
-    .header{
+    .fixed-header{
         display: none;
     }
     .fa,.fab{
@@ -234,6 +237,10 @@ body{
 @media(min-width:1280px){
     .hamburger{
         display: none;
+    }
+    body{
+        margin-top: 60px;
+        margin-bottom: 40px;
     }
     .fa,.fab{
         font-size: 1.25rem; /* 20 px*/
