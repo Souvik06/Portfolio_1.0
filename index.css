@@ -42,26 +42,39 @@ body{
 
 .sidebar{
     position: absolute;
-    background-color: rgb(196, 192, 192);
+    background-color:antiquewhite;
     width: 300px;
     font-family: 'Fira Sans',sans-serif;
     height: 100vh;
     transition: transform 0.3s ease-in;
 }
 
-.sidebar nav{
-    padding: 40px;
+.sidebarMenu{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
 }
 
-.sidebar nav li{
+.sidemenu{
    list-style: none;
    font-size: 30px;
-   padding: 35px 0;
+   padding: 25px 0;
+   text-align: center;
 }
 
-.sidebar nav li a{
+.sidepic{
+    background-color:whitesmoke;
+    border-style: solid;
+    border-radius: 50%;
+    max-height: 175px;
+}
+
+.sidemenuTitle{
     text-decoration: none;
     color: black;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: HelveticaNeue,sans-serif;
 }
 
 .sidebarGo{
