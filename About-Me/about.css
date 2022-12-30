@@ -12,14 +12,14 @@ body{
 }
 
 .fixed-header{
-    background: wheat;
+    background: antiquewhite;
     width: 100%;
     position: fixed;
-    display: flex;
     top: 0;
-    flex-direction: row-reverse;
-    padding: 15px;
-    
+    display: flex;
+    padding: 5px 0;
+    justify-content: center;
+    align-items: center;   
 }
 
 .menuGroup{
