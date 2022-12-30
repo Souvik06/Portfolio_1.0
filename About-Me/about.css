@@ -18,9 +18,9 @@ body{
     top: 0;
     display: flex;
     padding: 25px 0;
-    /* flex-direction: row-reverse; */
-    align-items: center;
-    justify-content: center;
+    flex-direction: row-reverse;
+    /* align-items: center;
+    justify-content: center; */
 }
 
 .menuGroup{
