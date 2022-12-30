@@ -12,7 +12,7 @@ body{
 }
 
 .fixed-header{
-    background: transparent;
+    background: wheat;
     width: 100%;
     position: fixed;
     display: flex;
@@ -113,7 +113,7 @@ body{
 }
 
 .intro{
-    margin: 30px 88px;
+    margin: 30px 150px;
 }
 
 .intro h2{
@@ -121,13 +121,34 @@ body{
     margin: 12px;
 }
 
+.intro hr{
+    margin: 0px 20px;
+}
+
+.parallax{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Make scrollable image */
+    background-image: url("../Images/pagebg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pageName{
+    font-size: 64px;
+    color: wheat;
+}
+
 .about-me{
     font-family: 'Source Code Pro', monospace;
-    margin: 12px;
+    margin: 20px;
 }
 
 .about-me ul{
-    padding-left: 40px;
+    padding-left: 30px;
     margin: 10px 0;
     list-style-type: square;
 }
@@ -182,6 +203,12 @@ table {
     .fixed-header{
         display: none;
     }
+    .parallax{
+        min-height: 400px;
+    }
+    .sectionTitle{
+        text-align: center;
+    }
 }
 
 @media(min-width:1280px){
@@ -191,5 +218,8 @@ table {
     body{
         margin-top: 60px;
         margin-bottom: 40px;
+    }
+    .parallax{
+        min-height: 500px;
     }
 }
