@@ -11,11 +11,15 @@ body{
     background-color: wheat;
 }
 
-.header{
+.fixed-header{
+    background: transparent;
+    width: 100%;
+    position: fixed;
     display: flex;
+    top: 0;
     flex-direction: row-reverse;
-    margin: 5px;
     padding: 15px;
+    
 }
 
 .menuGroup{
@@ -101,7 +105,7 @@ body{
 
 .main{
     /* background-color: yellow; */
-    width: 90vw;
+    width: 100%;
 }
 
 .container{
@@ -117,9 +121,19 @@ body{
     margin: 12px;
 }
 
-.intro p,dt,dd{
+.about-me{
     font-family: 'Source Code Pro', monospace;
     margin: 12px;
+}
+
+.about-me ul{
+    padding-left: 40px;
+    margin: 10px 0;
+    list-style-type: square;
+}
+
+.about-me li{
+    padding-left: 10px;
 }
 
 table {
@@ -163,9 +177,9 @@ table {
 
 @media (max-width: 1279px) { 
     .intro{
-        margin: 80px 8px;
+        margin: 80px 15px;
     }
-    .header{
+    .fixed-header{
         display: none;
     }
 }
@@ -173,5 +187,9 @@ table {
 @media(min-width:1280px){
     .hamburger{
         display: none;
+    }
+    body{
+        margin-top: 60px;
+        margin-bottom: 40px;
     }
 }
