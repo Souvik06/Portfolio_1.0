@@ -21,11 +21,16 @@ body{
     padding: 25px 0;
 }
 
-.logo{
+.logo-header{
     float: left;
     margin: 2px 48px;
     font-family: 'Lovers Quarrel';
     font-size: 32px;
+}
+
+.logo-sidebar{
+    font-family: 'Lovers Quarrel';
+    font-size: 40px;
 }
 
 .headerMenu{
@@ -74,6 +79,10 @@ body{
    font-size: 30px;
    padding: 25px 0;
    text-align: center;
+}
+
+.sidemenu:nth-of-type(2){
+    padding: 10px 0;
 }
 
 .sidepic{
