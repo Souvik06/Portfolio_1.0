@@ -37,9 +37,12 @@
             </a>
         </div>
 
-        <form class="contact-form card" id="contactForm">
+        <form class="contact-form card" id="contactForm" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
             <h3>Contact Me for Work / General Enquiries</h3>
-            <!-- Honeypot spam filter (must stay empty) -->
+            <!-- Netlify needs this so the submission is tied to the "contact" form -->
+            <input type="hidden" name="form-name" value="contact">
+            <!-- Honeypots (must stay empty): bot-field = Netlify, botcheck = W3Forms -->
+            <p class="hidden-field" hidden><label>Don’t fill this out if you’re human: <input name="bot-field"></label></p>
             <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;">
             <div class="form-field">
                 <label for="name">Name</label>
@@ -71,7 +74,6 @@
     <div id="site-footer"></div>
 
     <script src="../theme.js"></script>
-    <script src="config.js"></script>
     <script src="contact.js"></script>
 </body>
 </html>

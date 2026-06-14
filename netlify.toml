@@ -1,0 +1,7 @@
+# Netlify configuration for the static portfolio site.
+# Pins the build image to Node 24 (also read from .nvmrc).
+# Only sets the Node version — publish/build settings stay as configured
+# in the Netlify dashboard so existing deploy behavior is unchanged.
+
+[build.environment]
+  NODE_VERSION = "24"

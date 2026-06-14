@@ -1,21 +1,25 @@
 /* =============================================================
-   Contact form — sends submissions to your email via W3Forms.
-   Works on any host (Netlify, Live Server, etc.); no server needed.
+   Contact form — submits to BOTH Netlify Forms and W3Forms so it works
+   no matter where the site is hosted:
+     • Netlify Forms — captured automatically when deployed on Netlify (the
+       POST to "/" is intercepted by Netlify). On other hosts it just 404s
+       and is ignored.
+     • W3Forms       — a client-side POST that emails you on ANY host
+       (Netlify, GitHub Pages, localhost).
+   Success is shown if EITHER backend accepts the submission.
 
-   ACCESS KEY (injected, not committed):
-   The key is provided one of two ways so it stays out of source control:
-     • CI / deploy: have your pipeline (e.g. GitHub Actions) replace the
-       __W3FORMS_ACCESS_KEY__ token below with the secret before publishing.
-     • Runtime: define window.W3FORMS_ACCESS_KEY before this script loads
-       (e.g. a gitignored contact/config.js used for local testing).
-   Note: a W3Forms access key is PUBLISHABLE — it ships in client-side JS
-   regardless. It is protected by the Allowed Domains list in your W3Forms
-   dashboard (add souvik-portfolio1.netlify.app and 127.0.0.1), not by secrecy.
+   W3Forms ACCESS KEY: a W3Forms key is PUBLISHABLE (it ships in this client
+   JS regardless), so it's hardcoded below. It's protected by the Allowed
+   Domains list in your W3Forms dashboard (add your netlify.app / custom
+   domain), not by secrecy. Inject window.W3FORMS_ACCESS_KEY at build time to
+   override it if you ever want to.
    ============================================================= */
 (function () {
   "use strict";
 
-  var ACCESS_KEY = (typeof window !== "undefined" && window.W3FORMS_ACCESS_KEY) || "__W3FORMS_ACCESS_KEY__";
+  var ACCESS_KEY =
+    (typeof window !== "undefined" && window.W3FORMS_ACCESS_KEY) ||
+    "w3f_fa884b878c29b474e409d2daeb91e2096d6ff13ccc8b1675";
 
   var form = document.getElementById("contactForm");
   if (!form) return;
@@ -48,36 +52,42 @@
       return;
     }
 
-    if (!ACCESS_KEY || ACCESS_KEY.indexOf("__") === 0 || ACCESS_KEY === "YOUR_W3FORMS_ACCESS_KEY") {
-      setStatus(
-        "Contact form isn't configured yet \u2014 the W3Forms access key hasn't been injected.",
-        "error"
-      );
-      return;
-    }
-
-    var data = new FormData(form);
-    data.set("access_key", ACCESS_KEY);
-
-    var name = (data.get("name") || "").toString().trim();
-    data.set("subject", "New portfolio enquiry from " + (name || "a visitor"));
-    data.set("from_name", "Souvik Portfolio \u2014 Contact Form");
-
     setLoading(true);
     setStatus("Sending your message\u2026", "pending");
 
-    fetch("https://api.w3forms.com/submit", {
+    // 1) Netlify Forms — captured only when hosted on Netlify; harmless 404 elsewhere.
+    var netlifyPost = fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString()
+    })
+      .then(function (r) { return r.ok; })
+      .catch(function () { return false; });
+
+    // 2) W3Forms — emails on any host.
+    var w3Data = new FormData(form);
+    w3Data.set("access_key", ACCESS_KEY);
+    var name = (w3Data.get("name") || "").toString().trim();
+    w3Data.set("subject", "New portfolio enquiry from " + (name || "a visitor"));
+    w3Data.set("from_name", "Souvik Portfolio \u2014 Contact Form");
+    var w3Post = fetch("https://api.w3forms.com/submit", {
       method: "POST",
       headers: { Accept: "application/json" },
-      body: data
+      body: w3Data
     })
       .then(function (response) {
         return response.json().then(function (json) {
           return { ok: response.ok, json: json };
         });
       })
-      .then(function (result) {
-        if (result.ok && result.json.success) {
+      .catch(function () { return { ok: false, json: null }; });
+
+    Promise.all([netlifyPost, w3Post])
+      .then(function (results) {
+        var netlifyOk = results[0];
+        var w3 = results[1];
+        var w3Ok = w3.ok && w3.json && w3.json.success;
+        if (w3Ok || netlifyOk) {
           setStatus(
             "Thanks! Your message has been sent \u2014 I'll get back to you soon.",
             "success"
@@ -85,17 +95,11 @@
           form.reset();
         } else {
           setStatus(
-            (result.json && (result.json.error || result.json.message)) ||
-              "Something went wrong. Please try again or email me directly.",
+            (w3.json && (w3.json.error || w3.json.message)) ||
+              "Something went wrong. Please try again or email me directly at souvik.chat2011@gmail.com.",
             "error"
           );
         }
-      })
-      .catch(function () {
-        setStatus(
-          "Network error. Please try again, or email me directly at souvik.chat2011@gmail.com.",
-          "error"
-        );
       })
       .finally(function () {
         setLoading(false);
