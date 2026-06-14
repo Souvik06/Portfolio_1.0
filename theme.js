@@ -17,7 +17,7 @@
     { id: "services", label: "Services", href: ROOT + "services/" },
     { id: "blogs", label: "Blogs", href: ROOT + "blogs/" },
     { id: "contact", label: "Contact", href: ROOT + "contact/" },
-    { id: "resume", label: "Resume", href: ROOT + "Documents/resume.pdf", external: true },
+    { id: "resume", label: "Resume", href: ROOT + "assets/resume.pdf", external: true },
   ];
   var SOCIALS = [
     { icon: "fa-brands fa-linkedin-in", href: "https://www.linkedin.com/in/souvik06/", label: "LinkedIn" },
@@ -26,6 +26,12 @@
     { icon: "fa-brands fa-facebook-f", href: "https://www.facebook.com/Souvik.chatterjee.06", label: "Facebook" },
     { icon: "fa-solid fa-envelope", href: "mailto:souvik.chat2011@gmail.com", label: "Email" },
   ];
+
+  /* ---------- Preload site images (warms cache for instant cross-page nav) ---------- */
+  ["assets/profile-pic.png", "assets/about-pic.jpeg", "assets/favicon.ico"].forEach(function (src) {
+    var img = new Image();
+    img.src = ROOT + src;
+  });
 
   /* ---------- Theme ---------- */
   function currentTheme() {
