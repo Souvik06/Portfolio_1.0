@@ -1,73 +1,72 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Souvik Chatterjee</title>
     <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <script>
+      (function () {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    <link rel="stylesheet" href="../theme.css">
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <!-- Page Container -->
-    <div class="container">
+    <script>window.SITE_ROOT = "../"; window.SITE_PAGE = "contact";</script>
 
-        <!-- Sidebar -->
-        <div class="sidebar sidebarGo">
-            <nav>
-                <ul>
-                    <li><a href="../">Home</a></li>
-                    <li><a href="../About-Me/about.html">About Me</a></li>
-                    <li><a href="../Services/services.html">Services</a></li>
-                    <li><a href="../Blogs/blogs.html">Blogs</a></li>
-                    <li><a href="../Contact-Me/contact.html">Contact Me</a></li>
-                </ul>
-            </nav>
-                    
-        <!-- End Sidebar -->
+    <!-- Navigation (injected by theme.js) -->
+    <div id="site-nav"></div>
+
+    <section class="section">
+        <p class="eyebrow">Get in Touch</p>
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact-methods">
+            <a class="card contact-method" href="mailto:souvik.chat2011@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span>souvik.chat2011@gmail.com</span>
+            </a>
+            <a class="card contact-method" href="https://www.linkedin.com/in/souvik06/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>linkedin.com/in/souvik06</span>
+            </a>
         </div>
 
-        <!-- Main Page -->
-        <div class="main">
-            <div class="hamburger">
-                <img src="../Images/ham.png" class="ham" width="50">
-                <img src="../Images/cross.png" class="cross" width="50">
+        <form class="contact-form card">
+            <h3>Contact Me for Work / General Enquiries</h3>
+            <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" autocomplete="name">
             </div>
-            <div class="contactform">
-                <h1>Contact Me for Work/General Enquires</h1>
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="name" class="form-control" id="name" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="phone" class="form-label">Phone Number</label>
-                        <input type="phone" class="form-control" id="phone">
-                    </div>
-                    <div class="mb-3">
-                        <label for="enquiry" class="form-label">Enquiry</label>
-                        <input type="name" class="form-control" id="enquiry" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3" id="form-check">
-                        <input type="checkbox" class="form-check-input" id="isclient">
-                        <label class="form-check-label" for="exampleCheck1">I want you to work on project with me</label>
-                    </div>
-                    <div id="help" class="form-text">*We'll never share your email & phone with anyone else.</div>
-                    <button type="submit" class="btn btn-sm">Submit</button>
-                </form>
+            <div class="form-field">
+                <label for="email">Email address</label>
+                <input type="email" id="email" autocomplete="email">
             </div>
-            
-        <!-- End Main Page -->
-        </div>
-        
-    <!-- End Page Container -->
-    </div>
-    
-    <script src="contact.js"></script>
-    
+            <div class="form-field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" autocomplete="tel">
+            </div>
+            <div class="form-field">
+                <label for="enquiry">Enquiry</label>
+                <textarea id="enquiry" rows="4"></textarea>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="isclient">
+                <label for="isclient">I want you to work on a project with me</label>
+            </div>
+            <p class="form-note">*We'll never share your email &amp; phone with anyone else.</p>
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer (injected by theme.js) -->
+    <div id="site-footer"></div>
+
+    <script src="../theme.js"></script>
 </body>
 </html>

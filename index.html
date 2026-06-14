@@ -1,106 +1,58 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Souvik Chatterjee - Web Developer, Programmer, ML Enthusiast</title>
+    <title>Souvik Chatterjee - Senior Quality Engineer / SDET</title>
     <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
+    <script>
+      (function () {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <!-- Menubar -->
-        <div class="fixed-header">
-            <h2 class="logo-header">
-                Souvik Chatterjee
-            </h2>
-            <nav class="headerMenu">
-                <ul class="menuGroup">
-                    <li class="menu">
-                        <a class="menuTitle" href="./">
-                            Home
-                        </a>
-                    </li>
-                    <li class="menu">
-                        <a class="menuTitle" href="./About-Me/about.html">
-                            About Me
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- Menubar -->
-        </div>
-        
-        <!-- Sidebar -->
-        <div class="sidebar sidebarGo">
-            <nav class="sidebarMenu">
-                <ul class="sidemenuGroup">
-                    <li class="sidemenu">
-                        <img class="sidepic" src="./Images/dev2.png" alt="Souvik Chatterjee">
-                    </li>
-                    <li class="sidemenu sidelogo">
-                        <h2 class="logo-sidebar">
-                            Souvik Chatterjee
-                        </h2>
-                    </li>
-                    <li class="sidemenu">
-                        <a class="sidemenuTitle" href="./">
-                            Home
-                        </a>
-                    </li>
-                    <li class="sidemenu">
-                        <a class="sidemenuTitle" href="./About-Me/about.html">
-                            About Me
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            
-        <!-- End Sidebar -->
-        </div>
-        <!-- End Header -->
-    </header>
+    <script>window.SITE_ROOT = "./"; window.SITE_PAGE = "home";</script>
 
-    <!-- Page Container -->
-    <div class="container">
+    <!-- Navigation (injected by theme.js) -->
+    <div id="site-nav"></div>
 
-        <!-- Main Page -->
-        <div class="main">
-            <div class="hamburger">
-                <i class="ham fa-solid fa-bars"></i>
-                <i class="cross fa-solid fa-xmark"></i>
-            </div>
-            <div class="infoContainer">
-                <div class="devInfo">
-                    <div class="hello">Hi I'm</div>
-                    <div class="name">Souvik Chatterjee</div>
-                    <div class="about">Developer, Tester, Photographer & Writer</div>
-                    <div class="moreAbout">Currently working in Cognizant as Test Analyst</div>
-                    <div class="buttons">
-                        <a href="./Documents/resume.html"><button class="btn">Resume</button></a>
-                        <a href="mailto:souvik.chat2011@gmail.com"><button class="btn">Contact Me</button></a>
-                    </div>
-                    <div class="social">
-                        <a href="https://github.com/Souvik06" class="socialLinks fab fa-github"></a>
-                        <a href="https://www.hackerrank.com/Souvik06" class="socialLinks fab fa-hackerrank"></a>
-                        <a href="https://www.linkedin.com/in/souvik06/" class="socialLinks fab fa-linkedin"></a>
-                        <a href="https://www.facebook.com/Souvik.chatterjee.06" class="socialLinks fab fa-facebook"></a>
-                        <a href="mailto:souvik.chat2011@gmail.com" class="socialLinks fa fa-envelope"></a>
-                    </div>
+    <!-- Hero -->
+    <main class="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-name">Souvik Chatterjee</h1>
+                <h2 class="hero-role">Senior Quality Engineer / SDET</h2>
+                <p class="hero-tagline">Playwright · TypeScript · Selenium · Agentic AI · ~5 Years</p>
+                <p class="hero-sub">Currently working in LTIMindtree as Senior Quality Engineer</p>
+
+                <div class="hero-stats">
+                    <div class="stat-chip"><span>90%</span> Faster Regression</div>
+                    <div class="stat-chip"><span>98%</span> Test Stability</div>
+                    <div class="stat-chip"><span>75%</span> Less Dev Effort</div>
                 </div>
-                <div class="devPic">
-                    <img src="./Images/dev2.png" alt="Souvik Chatterjee">
+
+                <div class="hero-buttons">
+                    <a href="./Documents/resume.pdf" target="_blank" rel="noopener"><button class="btn btn-primary"><i class="fa-solid fa-file-lines"></i> Resume</button></a>
+                    <a href="./contact/"><button class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact Me</button></a>
                 </div>
             </div>
 
-        <!-- End Main Page -->
+            <div class="hero-pic">
+                <img src="./Images/profile-pic.png" alt="Souvik Chatterjee">
+            </div>
         </div>
-    
-    <!-- End Page Container -->
-    </div>
-    
-    <script src="index.js"></script>
+    </main>
+
+    <!-- Footer (injected by theme.js) -->
+    <div id="site-footer"></div>
+
+    <script src="theme.js"></script>
 </body>
 </html>

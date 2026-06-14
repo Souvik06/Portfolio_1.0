@@ -1,50 +1,67 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cervices - Souvik Chatterjee</title>
+    <title>Services - Souvik Chatterjee</title>
     <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <script>
+      (function () {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    <link rel="stylesheet" href="../theme.css">
     <link rel="stylesheet" href="services.css">
 </head>
 <body>
-    <!-- Page Container -->
-    <div class="container">
+    <script>window.SITE_ROOT = "../"; window.SITE_PAGE = "services";</script>
 
-        <!-- Sidebar -->
-        <div class="sidebar sidebarGo">
-            <nav>
-                <ul>
-                    <li><a href="../">Home</a></li>
-                    <li><a href="../About-Me/about.html">About Me</a></li>
-                    <li><a href="../Services/services.html">Services</a></li>
-                    <li><a href="../Blogs/blogs.html">Blogs</a></li>
-                    <li><a href="../Contact-Me/contact.html">Contact Me</a></li>
-                </ul>
-            </nav>
-            
-        <!-- End Sidebar -->
-        </div>
+    <!-- Navigation (injected by theme.js) -->
+    <div id="site-nav"></div>
 
-        <!-- Main Page -->
-        <div class="main">
-            <div class="hamburger">
-                <img src="../Images/ham.png" class="ham" width="50">
-                <img src="../Images/cross.png" class="cross" width="50">
+    <section class="section">
+        <p class="eyebrow">What I Do</p>
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+            <div class="card service-card">
+                <i class="fa-solid fa-robot"></i>
+                <h3>Test Automation Frameworks</h3>
+                <p>Scalable, maintainable automation frameworks with Playwright (TypeScript) and Selenium (Java) using POM, fixtures and reusable utilities.</p>
             </div>
-            <div class="serviceContainer">
-                <h2>Services</h2>
-                <div class="serviceItems"></div>
+            <div class="card service-card">
+                <i class="fa-solid fa-diagram-project"></i>
+                <h3>Hybrid UI + API Testing</h3>
+                <p>End-to-end UI testing combined with robust API validation (Rest Assured, Postman, Bruno) for full-stack coverage.</p>
             </div>
-
-        <!-- End Main Page -->
+            <div class="card service-card">
+                <i class="fa-solid fa-gears"></i>
+                <h3>CI/CD Integration</h3>
+                <p>Pipeline automation with Azure DevOps, GitHub Actions and Jenkins — PR validation, cross-browser runs and parallel execution.</p>
+            </div>
+            <div class="card service-card">
+                <i class="fa-solid fa-brain"></i>
+                <h3>Agentic AI-Assisted Testing</h3>
+                <p>Multi-agent automation solutions using GitHub Copilot and Playwright MCP servers to accelerate test development by up to 75%.</p>
+            </div>
+            <div class="card service-card">
+                <i class="fa-solid fa-gauge-high"></i>
+                <h3>Performance &amp; Optimization</h3>
+                <p>Sharding, smart auto-waits, retry logic and custom reporters to cut regression time and maximise test stability.</p>
+            </div>
+            <div class="card service-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Reporting &amp; Debugging</h3>
+                <p>Actionable Allure / HTML reports, JUnit XML and Playwright Trace Viewer for fast failure diagnosis.</p>
+            </div>
         </div>
-    
-    <!-- End Page Container -->
-    </div>
-    
-    <script src="services.js"></script>
-    
+    </section>
+
+    <!-- Footer (injected by theme.js) -->
+    <div id="site-footer"></div>
+
+    <script src="../theme.js"></script>
 </body>
 </html>

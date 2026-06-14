@@ -1,80 +1,184 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Source+Code+Pro&display=swap');
+/* Services page — uses shared design tokens from theme.css */
 
-*{
-    margin: 0;
-    padding: 0;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 1.25rem;
 }
 
-.sidebar{
-    position: absolute;
-    background-color: rgb(196, 192, 192);
-    width: 300px;
-    font-family: 'Fira Sans',sans-serif;
-    height: 100vh;
-    transition: transform 0.3s ease-in;
+.service-card {
+  padding: 1.8rem 1.5rem;
 }
 
-.sidebar nav{
-    padding: 40px;
+.service-card i {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
 }
 
-.sidebar nav li{
-   list-style: none;
-   font-size: 30px;
-   padding: 35px 0;
+.service-card h3 {
+  font-size: 1.15rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
 }
 
-.sidebar nav li a{
-    text-decoration: none;
-    color: black;
+.service-card p {
+  font-size: 0.92rem;
+  color: var(--text-body);
 }
 
-.sidebarGo{
-    transform: translate(-443px,0px);
-    position: absolute;
+/* Recommendations carousel (Portfolio 2.0 style) */
+.section-full {
+  max-width: 100%;
 }
 
-.hamburger{
-    position: absolute;
-    cursor: pointer;
-    top:10px;
-    left: 10px;
+.carousel {
+  margin-top: 2.5rem;
 }
 
-.ham{
-    margin-top: 10px;
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
-.cross{
-    margin-left: 225px;
-    margin-top: 10px;
+.carousel-viewport {
+  overflow: hidden;
+  flex: 1;
+  border-radius: var(--r);
+  min-width: 0;
+  width: 100%;
+  padding: 10px 0;
 }
 
-.main{
-    /* background-color: yellow; */
-    width: 90vw;
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 
-.container{
-    display: flex;
+.c-card {
+  flex: 0 0 auto;
+  box-sizing: border-box;
 }
 
-.serviceContainer{
-    margin: 30px 88px;
+.carousel-btn {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--accent);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
-.serviceContainer h2{
-    font-family: 'Fira Sans',sans-serif;
-    margin: 23px;
+.carousel-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+  transform: scale(1.06);
 }
 
-.serviceContainer p{
-    font-family: 'Source Code Pro', monospace;
-    margin: 12px;
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
 }
-@media (max-width: 1615px) { 
-    .serviceContainer{
-        margin: 80px 8px;
-    }
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: var(--accent);
+  width: 24px;
+  border-radius: 4px;
+}
+
+.dot:hover:not(.active) {
+  background: var(--accent-light);
+  transform: scale(1.25);
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.75rem;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.testimonial-quote-mark {
+  font-size: 3.5rem;
+  line-height: 0.75;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none;
+}
+
+.testimonial-text {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.78;
+  font-style: italic;
+  flex: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.testimonial-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.testimonial-role {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+.testimonial-relation {
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 0.1rem;
 }

@@ -1,275 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Source+Code+Pro&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css');
-@import url('https://fonts.googleapis.com/css?family=Lovers Quarrel');
+/* About page — uses shared design tokens from theme.css */
 
-*{
-    margin: 0;
-    padding: 0;
-    user-select: none;
+.about-hero {
+  text-align: center;
+  padding: 3.5rem 6% 1rem;
 }
 
-body{
-    background-color: wheat;
+.about-hero-title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.fixed-header{
-    background: wheat;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    padding: 25px 0;
+.about-hero-sub {
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 0.3rem;
 }
 
-.logo-header{
-    float: left;
-    margin: 2px 48px;
-    font-family: 'Lovers Quarrel';
-    font-size: 32px;
-    user-select: none;
+.about-bio {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
 }
 
-.logo-sidebar{
-    font-family: 'Lovers Quarrel';
-    font-size: 40px;
+.about-bio-img {
+  flex: 0 0 auto;
+  max-width: 300px;
 }
 
-.headerMenu{
-    float: right;
-}
-.menuGroup{
-    display: flex;
-}
-
-.menu{
-    list-style-type: none;
-    margin: 10px 25px;
+.about-bio-img img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--r);
+  box-shadow: var(--shadow-lg);
 }
 
-.menuTitle{
-    margin: 0 10px;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: HelveticaNeue,sans-serif;
+.about-bio-text { flex: 1 1 420px; min-width: 0; }
+
+.about-bio-text h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
 }
 
-.menuTitle:hover{
-    opacity: 60%;
+.about-bio-text p {
+  margin-bottom: 0.9rem;
+  color: var(--text-body);
 }
 
-.sidebar{
-    position: absolute;
-    background-color:antiquewhite;
-    width: 300px;
-    font-family: 'Fira Sans',sans-serif;
-    height: 100vh;
-    transition: transform 0.3s ease-in;
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-.sidemenu:nth-of-type(2){
-    padding: 10px 0;
+.about-card {
+  padding: 1.4rem;
+  text-align: center;
 }
 
-.sidebarMenu{
-    display: flex;
-    justify-content: center;
-    padding: 25px;
+.about-card i {
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
 }
 
-.sidemenu{
-   list-style: none;
-   font-size: 30px;
-   padding: 25px 0;
-   text-align: center;
+.about-card h3 {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 0.4rem;
 }
 
-.sidepic{
-    background-color:whitesmoke;
-    border-style: solid;
-    border-radius: 50%;
-    max-height: 175px;
+.about-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0;
 }
 
-.sidemenuTitle{
-    text-decoration: none;
-    color: black;
-    font-size: 25px;
-    font-weight: 600;
-    font-family: HelveticaNeue,sans-serif;
+/* Certifications */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.25rem;
 }
 
-.sidebarGo{
-    transform: translate(-443px,0px);
-    position: absolute;
+.cert-card {
+  padding: 1.6rem 1.4rem;
+  text-align: center;
 }
 
-.hamburger{
-    position: absolute;
-    cursor: pointer;
-    top:10px;
-    left: 10px;
-    margin: 10px;
+.cert-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: var(--r-full);
+  background: var(--accent-gradient);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 0.9rem;
 }
 
-.ham{
-    font-size: 24px;
+.cert-card h3 {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 0.35rem;
 }
 
-.cross{
-    font-size: 24px;
-    padding-left: 240px;
+.cert-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
 
-.main{
-    /* background-color: yellow; */
-    width: 100%;
-}
-
-.container{
-    display: flex;
-}
-
-.intro{
-    margin: 30px 100px;
-}
-
-.intro h2{
-    font-family: 'Fira Sans',sans-serif;
-    margin: 12px;
-}
-
-.intro hr{
-    margin: 0px 20px;
-}
-
-.parallax{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Make scrollable image */
-    background-image: url("../Images/pagebg.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.pageName{
-    font-size: 64px;
-    color: wheat;
-}
-
-.aboutContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 100px;
-    margin: 15px 25px;
-}
-
-.myPic{
-    max-height: 300px;
-    border-radius: 5%;
-}
-
-.about-me{
-    font-family: 'Source Code Pro', monospace;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-around;
-}
-
-.about-me h2{
-    margin: 10px 0;    
-    font-weight: bold;
-    font-family: 'Fira Sans',sans-serif;
-}
-
-.about-me ul{
-    padding-left: 30px;
-    margin: 10px 0;
-    list-style-type: square;
-}
-
-.about-me li{
-    padding-left: 10px;
-}
-
-table {
-    width: max-content;
-}
-
-.skill{
-    width: 265px;
-    height: 5px;
-    background-color: red;
-    border: 2px solid black;
-}
-
-.skillItem{
-    display: flex;
-    align-items: center;
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 900;
-}
-
-.skillContainer{
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-}
-
-.hundred{
-    width:250px;
-    background-color: green;
-}
-
-.fifty{
-    width:125px;
-    background-color: yellow;
-}
-
-.t5{
-    width:72.5px;
-    background-color: red
-}
-
-@media (max-width: 1279px) { 
-    .intro{
-        margin: 80px 15px;
-    }
-    .fixed-header{
-        display: none;
-    }
-    .parallax{
-        min-height: 400px;
-    }
-    .sectionTitle{
-        text-align: center;
-    }
-    .aboutContainer{
-        flex-direction: column;
-        flex-wrap: wrap;
-        padding: 20px 5px;
-        margin: 0;
-    }
-}
-
-@media(min-width:1280px){
-    .hamburger{
-        display: none;
-    }
-    body{
-        margin-top: 60px;
-        margin-bottom: 40px;
-    }
-    .parallax{
-        min-height: 500px;
-    }
+@media (max-width: 768px) {
+  .about-bio { flex-direction: column; align-items: center; text-align: center; }
+  .timeline-bullets li { text-align: left; }
 }
